@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EncodingApp.EncoderPage"
+             Title="Encoder App"
+             BackgroundColor="{StaticResource Primary}">
+    <VerticalStackLayout HorizontalOptions="Center"
+                         Spacing="10">
+        <Label Text="Welcome!" 
+               FontSize="50"
+               HorizontalTextAlignment="Center"/>
+        <Entry x:Name="numEntry" 
+               Placeholder="Enter a number" BackgroundColor="{StaticResource Secondary}"
+               TextColor="{StaticResource Text}"/>
+        <Label Text="Select a base."/>
+        <HorizontalStackLayout BackgroundColor="{StaticResource Secondary}">
+            <RadioButton x:Name="iBin" Content="Bin"/>
+            <RadioButton x:Name="iOct" Content="Oct"/>
+            <RadioButton x:Name="iDec" Content="Dec"/>
+            <RadioButton x:Name="iHex" Content="Hex"/>
+        </HorizontalStackLayout>
+        <Label Text="Select a base."/>
+        <HorizontalStackLayout BackgroundColor="{StaticResource Secondary}">
+            <RadioButton x:Name="oBin" Content="Bin"/>
+            <RadioButton x:Name="oOct" Content="Oct"/>
+            <RadioButton x:Name="oDec" Content="Dec"/>
+            <RadioButton x:Name="oHex" Content="Hex"/>
+        </HorizontalStackLayout>
+        <Button Text="ENCODE"
+                Clicked="EncodeClicked"
+                BackgroundColor="{StaticResource Accent}"/>
+        <Label x:Name="resultLabel"
+               FontSize="40"
+               HorizontalTextAlignment="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
+
